@@ -269,6 +269,7 @@ nav a:hover,nav a:focus-visible{color:var(--snow);border-bottom-color:var(--bras
 .fx-point.key .fx-num{font-size:clamp(3.1rem,7.2vw,5rem)}
 .fx-sub{display:block;font-size:.86rem;color:var(--mist-2);margin-top:12px;line-height:1.55;max-width:24ch;margin-inline:auto}
 .fx-note{margin-top:clamp(34px,4.5vw,48px);font-size:1.02rem;color:var(--mist);max-width:62ch}
+.fx-disclaimer{margin-top:14px;font-family:var(--mono);font-size:.74rem;color:var(--mist-2);max-width:62ch}
 @media(max-width:640px){.fx-compare{grid-template-columns:1fr;gap:30px}}
 
 /* ---------- ציר זמן ---------- */
@@ -695,6 +696,7 @@ html[data-a11y-font="-1"] body{font-size:16px}
       </div>
     </div>
     <p class="fx-note">Volatility isn't a tail scenario, it's the everyday reality. That is exactly the exposure a proper hedging policy is meant to manage.</p>
+    <p class="fx-disclaimer">The rate updates automatically from an external data source (Frankfurter / ECB) and reflects a daily reference rate, not real-time intraday volatility.</p>
   </div>
 </div>
 
@@ -917,20 +919,25 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     } catch (e) { /* static fallback stays */ }
   }
 
-  Promise.allSettled([
-    loadFxGroup('USD', ['ILS']).then(loadFxCompare),
-    loadFxGroup('EUR', ['ILS','USD']),
-    loadFxGroup('GBP', ['ILS','USD']),
-    loadFxGroup('CHF', ['ILS']),
-    loadCommodity('GOLD','GC=F'),
-    loadCommodity('SILVER','SI=F'),
-    loadCommodity('BRENT','BZ=F'),
-    loadCommodity('WTI','CL=F'),
-    loadCommodity('COPPER','HG=F'),
-    loadCommodity('NATGAS','NG=F'),
-    loadCommodity('PLATINUM','PL=F')
-  ]);
-  // any rejected item above simply leaves its static fallback value in place (offline, blocked, or viewing the file locally)
+  function refreshAll(){
+    Promise.allSettled([
+      loadFxGroup('USD', ['ILS']).then(loadFxCompare),
+      loadFxGroup('EUR', ['ILS','USD']),
+      loadFxGroup('GBP', ['ILS','USD']),
+      loadFxGroup('CHF', ['ILS']),
+      loadCommodity('GOLD','GC=F'),
+      loadCommodity('SILVER','SI=F'),
+      loadCommodity('BRENT','BZ=F'),
+      loadCommodity('WTI','CL=F'),
+      loadCommodity('COPPER','HG=F'),
+      loadCommodity('NATGAS','NG=F'),
+      loadCommodity('PLATINUM','PL=F')
+    ]);
+    // any rejected item above simply leaves its previous/static value in place (offline, blocked, or viewing the file locally)
+  }
+
+  refreshAll();
+  setInterval(refreshAll, 90000); // periodic refresh while the page is open (Frankfurter is a daily reference rate, not intraday)
 })();
 
 const contactOverlay = document.getElementById('contactOverlay');

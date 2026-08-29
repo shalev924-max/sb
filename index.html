@@ -438,52 +438,6 @@ details p{margin:16px 0 0;color:#41586E;font-size:1rem;max-width:76ch;line-heigh
 .dl dd a:hover{border-bottom-color:var(--brass);color:var(--brass)}
 @media(max-width:840px){.contact-grid,.about-grid{grid-template-columns:1fr}}
 
-/* ---------- מודל יצירת קשר ---------- */
-.modal-overlay{
-  position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;
-  padding:24px;background:rgba(5,14,27,.72);backdrop-filter:blur(6px) saturate(120%);
-}
-.modal-overlay.open{display:flex}
-.modal{
-  position:relative;width:100%;max-width:540px;max-height:88vh;overflow-y:auto;
-  background:var(--ink-2);border:1px solid var(--hair-2);
-  padding:clamp(30px,5vw,46px);box-shadow:0 30px 80px rgba(0,0,0,.5);
-}
-.modal-close{
-  position:absolute;top:16px;inset-inline-end:16px;background:none;border:none;
-  color:var(--mist-2);font-size:1.7rem;line-height:1;cursor:pointer;padding:8px;
-  font-family:var(--mono);transition:.2s;
-}
-.modal-close:hover{color:var(--brass)}
-.modal h3{font-size:1.4rem;margin-bottom:.5rem}
-.modal .lede{font-size:.96rem;max-width:none;margin-bottom:1.7rem}
-.mfield{margin-bottom:20px}
-.mfield label{
-  display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--brass);margin-bottom:8px;
-}
-.mfield input,.mfield textarea{
-  width:100%;background:transparent;border:none;border-bottom:1px solid var(--hair-2);
-  color:var(--snow);font-family:var(--body);font-size:1rem;padding:9px 2px;
-  transition:border-color .25s;resize:vertical;
-}
-.mfield textarea{min-height:96px}
-.mfield input:focus,.mfield textarea:focus{outline:none;border-color:var(--brass)}
-.mfield input::placeholder,.mfield textarea::placeholder{color:var(--mist-2);opacity:.55}
-.modal-submit{
-  width:100%;margin-top:6px;border:none;cursor:pointer;
-  background:var(--brass);color:#0A1622;font-weight:600;font-size:1rem;
-  padding:1rem;border-radius:2px;transition:.25s;
-}
-.modal-submit:hover{background:#E2BC77}
-.modal-submit:disabled{opacity:.6;cursor:default}
-.modal-note{font-size:.8rem;color:var(--mist-2);margin-top:14px;line-height:1.6}
-.modal-status{font-size:.92rem;margin-top:14px;display:none;line-height:1.6}
-.modal-status.show{display:block}
-.modal-status.ok{color:#8FCB9C}
-.modal-status.err{color:#E2A08F}
-.hp-field{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;opacity:0}
-
 /* ---------- וידג'ט נגישות ---------- */
 .a11y-toggle{
   position:fixed;bottom:22px;left:22px;z-index:400;
@@ -549,7 +503,6 @@ details p{margin:16px 0 0;color:#41586E;font-size:1rem;max-width:76ch;line-heigh
   opacity:0;pointer-events:none;transition:opacity .2s;
 }
 .wa-fab:hover .wa-tip,.wa-fab:focus-visible .wa-tip,.wa-fab.wa-peek .wa-tip{opacity:1}
-#contactOverlay.open ~ .wa-fab{opacity:0;visibility:hidden;pointer-events:none}
 @media (max-width:600px){
   .wa-fab{width:56px;height:56px;bottom:18px;right:18px}
   .wa-fab svg{width:28px;height:28px}
@@ -702,7 +655,7 @@ footer a:hover{color:var(--brass)}
       <div class="cta-row">
         <a class="btn btn-solid" href="#contact">לשיחת אבחון חשיפות</a>
         <a class="btn btn-ghost" href="#experience">הניסיון המקצועי</a>
-        <a class="btn btn-wa" href="https://wa.me/972544581382?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%20%D7%94%D7%99%D7%99%D7%AA%D7%99%20%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener">
+        <a class="btn btn-wa" href="https://wa.me/972544581382?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%94%D7%99%D7%99%D7%AA%D7%99%20%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank" rel="noopener">
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.37 3 3.97 8.4 3.97 15.05c0 2.24.6 4.42 1.75 6.34L3.9 27.9l6.67-1.79a12.03 12.03 0 0 0 5.44 1.31h.01c6.64 0 12.05-5.4 12.05-12.05C28.07 8.4 22.67 3 16.02 3zm0 21.9h-.01a10 10 0 0 1-5.11-1.4l-.37-.22-3.96 1.06 1.06-3.86-.24-.4a9.9 9.9 0 0 1-1.53-5.28C5.86 9.5 10.4 4.96 16.02 4.96c2.68 0 5.2 1.05 7.1 2.95a9.94 9.94 0 0 1 2.94 7.14c0 5.53-4.54 10.05-10.04 10.05zm5.5-7.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.57-.49-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.62.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
           שלחו הודעה בוואטסאפ
         </a>
@@ -1025,8 +978,14 @@ footer a:hover{color:var(--brass)}
         בסופה תדעו במה אתם חשופים ומה סדר הגודל, עוד לפני שדובר על ליווי.
       </p>
       <p style="margin-bottom:0">
-        <button type="button" class="btn btn-solid" data-open-contact>שליחת פנייה במייל</button>
+        ליצירת קשר ניתן לשלוח הודעה בוואטסאפ או לשלוח מייל ישירות: <a href="mailto:berger.finance@gmail.com">berger.finance@gmail.com</a>
       </p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/972544581382?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%94%D7%99%D7%99%D7%AA%D7%99%20%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.37 3 3.97 8.4 3.97 15.05c0 2.24.6 4.42 1.75 6.34L3.9 27.9l6.67-1.79a12.03 12.03 0 0 0 5.44 1.31h.01c6.64 0 12.05-5.4 12.05-12.05C28.07 8.4 22.67 3 16.02 3zm0 21.9h-.01a10 10 0 0 1-5.11-1.4l-.37-.22-3.96 1.06 1.06-3.86-.24-.4a9.9 9.9 0 0 1-1.53-5.28C5.86 9.5 10.4 4.96 16.02 4.96c2.68 0 5.2 1.05 7.1 2.95a9.94 9.94 0 0 1 2.94 7.14c0 5.53-4.54 10.05-10.04 10.05zm5.5-7.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.57-.49-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.62.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+          שלחו הודעה בוואטסאפ
+        </a>
+      </div>
     </div>
     <dl class="dl rv">
       <div><dt>טלפון</dt><dd><a href="tel:+972544581382">054-458-1382</a></dd></div>
@@ -1085,40 +1044,6 @@ footer a:hover{color:var(--brass)}
   </div>
 </footer>
 
-<div class="modal-overlay" id="contactOverlay" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-    <button type="button" class="modal-close" id="contactClose" aria-label="סגירה">×</button>
-    <span class="eyebrow">יצירת קשר</span>
-    <h3 id="contactModalTitle">נשלח לשמואל ישירות</h3>
-    <p class="lede">מלאו את הפרטים, הפנייה תישלח ישירות לתיבת המייל של שמואל ברגר.</p>
-    <form id="contactForm" action="https://formsubmit.co/ajax/berger.finance@gmail.com" method="POST">
-      <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
-      <input type="hidden" name="_subject" value="פנייה חדשה מהאתר של שמואל ברגר">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <div class="mfield">
-        <label for="cf-name">שם מלא</label>
-        <input type="text" id="cf-name" name="שם מלא" required autocomplete="name">
-      </div>
-      <div class="mfield">
-        <label for="cf-email">אימייל</label>
-        <input type="email" id="cf-email" name="אימייל" required autocomplete="email">
-      </div>
-      <div class="mfield">
-        <label for="cf-phone">טלפון</label>
-        <input type="tel" id="cf-phone" name="טלפון" required autocomplete="tel">
-      </div>
-      <div class="mfield">
-        <label for="cf-message">פרטי הפנייה</label>
-        <textarea id="cf-message" name="פרטי הפנייה" required></textarea>
-      </div>
-      <button type="submit" class="modal-submit" id="contactSubmit">שליחת הפנייה</button>
-      <p class="modal-status" id="contactStatus"></p>
-      <p class="modal-note">אפשר גם ליצור קשר טלפוני: <a href="tel:+972544581382">054-458-1382</a> · או ישירות במייל: <a href="mailto:berger.finance@gmail.com">berger.finance@gmail.com</a></p>
-    </form>
-  </div>
-</div>
-
 <button type="button" class="a11y-toggle" id="a11yToggle" aria-label="פתח תפריט נגישות" aria-expanded="false">
   <svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M4 8.5c3 1 13 1 16 0M12 6.3v6M8 21l2.6-8.5M16 21l-2.6-8.5M8.5 14h7"/></svg>
 </button>
@@ -1145,7 +1070,7 @@ footer a:hover{color:var(--brass)}
   <a class="a11y-statement-link" href="accessibility.html">הצהרת נגישות מלאה</a>
 </div>
 
-<a class="wa-fab" id="waFab" href="https://wa.me/972544581382?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%20%D7%94%D7%99%D7%99%D7%AA%D7%99%20%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ">
+<a class="wa-fab" id="waFab" href="https://wa.me/972544581382?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%94%D7%99%D7%99%D7%AA%D7%99%20%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.37 3 3.97 8.4 3.97 15.05c0 2.24.6 4.42 1.75 6.34L3.9 27.9l6.67-1.79a12.03 12.03 0 0 0 5.44 1.31h.01c6.64 0 12.05-5.4 12.05-12.05C28.07 8.4 22.67 3 16.02 3zm0 21.9h-.01a10 10 0 0 1-5.11-1.4l-.37-.22-3.96 1.06 1.06-3.86-.24-.4a9.9 9.9 0 0 1-1.53-5.28C5.86 9.5 10.4 4.96 16.02 4.96c2.68 0 5.2 1.05 7.1 2.95a9.94 9.94 0 0 1 2.94 7.14c0 5.53-4.54 10.05-10.04 10.05zm5.5-7.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.57-.49-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.62.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
   <span class="wa-tip">שלחו הודעה בוואטסאפ</span>
 </a>
@@ -1263,58 +1188,6 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   refreshAll();
   setInterval(refreshAll, 90000); // רענון תקופתי כל עוד הדף פתוח (Frankfurter מספק שער ייחוס יומי, לא תוך-יומי)
 })();
-
-const contactOverlay = document.getElementById('contactOverlay');
-const contactForm = document.getElementById('contactForm');
-const contactStatus = document.getElementById('contactStatus');
-const contactSubmit = document.getElementById('contactSubmit');
-
-function openContact(){
-  contactOverlay.classList.add('open');
-  contactOverlay.setAttribute('aria-hidden','false');
-  document.body.style.overflow = 'hidden';
-  contactStatus.className = 'modal-status';
-  contactStatus.textContent = '';
-  contactSubmit.disabled = false;
-  contactSubmit.textContent = 'שליחת הפנייה';
-  const first = document.getElementById('cf-name');
-  if (first) first.focus();
-}
-function closeContact(){
-  contactOverlay.classList.remove('open');
-  contactOverlay.setAttribute('aria-hidden','true');
-  document.body.style.overflow = '';
-}
-document.querySelectorAll('[data-open-contact]').forEach(b => b.addEventListener('click', (e) => { e.preventDefault(); openContact(); }));
-document.getElementById('contactClose').addEventListener('click', closeContact);
-contactOverlay.addEventListener('click', (e) => { if (e.target === contactOverlay) closeContact(); });
-addEventListener('keydown', (e) => { if (e.key === 'Escape' && contactOverlay.classList.contains('open')) closeContact(); });
-
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  contactSubmit.disabled = true;
-  contactSubmit.textContent = 'שולח…';
-  contactStatus.className = 'modal-status show';
-  contactStatus.textContent = '';
-  try {
-    const res = await fetch(contactForm.action, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(contactForm)
-    });
-    if (!res.ok) throw new Error('bad status');
-    contactStatus.classList.add('ok');
-    contactStatus.textContent = 'תודה! הפנייה נשלחה בהצלחה, שמואל יחזור אליכם בהקדם.';
-    contactForm.reset();
-    contactSubmit.textContent = 'נשלח בהצלחה';
-    setTimeout(closeContact, 2400);
-  } catch (err) {
-    contactStatus.classList.add('err');
-    contactStatus.textContent = 'משהו השתבש בשליחה. אפשר לנסות שוב, או לכתוב ישירות ל-berger.finance@gmail.com';
-    contactSubmit.disabled = false;
-    contactSubmit.textContent = 'שליחת הפנייה';
-  }
-});
 
 (function a11yWidget(){
   const html = document.documentElement;

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.shmuelberger.co.il/sitemap.xml
+Sitemap: https://shmuelberger.co.il/sitemap.xml

@@ -16,7 +16,7 @@ robots.txt / sitemap.xml   קבצי SEO סטנדרטיים
 
 ## לפני שהאתר עולה לאוויר
 
-1. **דומיין**: יש להחליף את `https://www.shmuelberger.co.il/` בדומיין האמיתי בכל הקבצים (meta tags, JSON-LD, canonical, sitemap.xml, robots.txt).
+1. ~~**דומיין**: יש להחליף את `https://www.shmuelberger.co.il/` בדומיין האמיתי בכל הקבצים (meta tags, JSON-LD, canonical, sitemap.xml, robots.txt).~~ בוצע — כל הקבצים מצביעים כעת על `https://shmuelberger.co.il/` (ללא www, תואם ל-CNAME).
 2. **אימות פרטי קשר**: הכתובת, הפקס והטלפון במקור מבוססים על מסמך ישן — כדאי לוודא מול שמואל שהם עדכניים.
 3. **בדיקה משפטית**: שלושת העמודים המשפטיים (terms/privacy/accessibility) נכתבו על בסיס מבנה סטנדרטי ותקנות ישראליות ידועות, אבל מומלץ מאוד שעורך דין יעבור עליהם לפני פרסום — הם לא נבדקו על ידי איש מקצוע מוסמך.
 

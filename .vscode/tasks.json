@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Local Server",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}/.vscode/serve.ps1"
+            ],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            },
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^__never_matches__$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^Starting local server\\.\\.\\.$",
+                    "endsPattern": "^Serving .* at http://localhost:8080/$"
+                }
+            }
+        }
+    ]
+}

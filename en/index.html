@@ -315,20 +315,20 @@ nav a:hover,nav a:focus-visible{color:var(--snow);border-bottom-color:var(--bras
 @media(max-width:540px){.sectors{grid-template-columns:1fr}}
 
 /* ---------- שאלות ותשובות: היפוך לבהיר ---------- */
-.faq{background:var(--relief);color:#22374C;padding:clamp(80px,10vw,124px) 0}
-.faq h2,.faq h3{color:var(--abyss)}
-.faq .eyebrow{color:var(--brass-2)}
-.faq .lede{color:#4A6178}
-details{border-bottom:1px solid rgba(9,26,45,.14);padding:24px 0}
-details:first-of-type{border-top:1px solid rgba(9,26,45,.14)}
+.faq{background:var(--ink);color:var(--mist);padding:clamp(80px,10vw,124px) 0}
+.faq h2,.faq h3{color:var(--snow)}
+.faq .eyebrow{color:var(--brass)}
+.faq .lede{color:var(--mist)}
+details{border-bottom:1px solid var(--hair);padding:24px 0}
+details:first-of-type{border-top:1px solid var(--hair)}
 details summary{
   cursor:pointer;list-style:none;font-family:var(--display);font-size:1.15rem;
-  font-weight:700;color:var(--abyss);display:flex;justify-content:space-between;gap:22px;align-items:baseline;
+  font-weight:700;color:var(--snow);display:flex;justify-content:space-between;gap:22px;align-items:baseline;
 }
 details summary::-webkit-details-marker{display:none}
-details summary::after{content:"+";font-family:var(--mono);color:var(--brass-2);font-size:1.35rem;flex:none;transition:transform .25s}
+details summary::after{content:"+";font-family:var(--mono);color:var(--brass);font-size:1.35rem;flex:none;transition:transform .25s}
 details[open] summary::after{content:"–"}
-details p{margin:16px 0 0;color:#41586E;font-size:1rem;max-width:76ch;line-height:1.75}
+details p{margin:16px 0 0;color:var(--mist-2);font-size:1rem;max-width:76ch;line-height:1.75}
 
 /* ---------- יצירת קשר ---------- */
 .contact{background:var(--abyss);padding:clamp(80px,10vw,132px) 0;position:relative;overflow:hidden}

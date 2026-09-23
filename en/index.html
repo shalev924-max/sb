@@ -49,12 +49,19 @@
   "givenName": "Shmuel",
   "familyName": "Berger",
   "jobTitle": "Consultant in Financial Risk Management, FX and Commodity Hedging",
+  "disambiguatingDescription": "Shmuel Berger, financial risk management and FX/commodity hedging consultant, former CBOE Chicago market maker and owner of Mirvachim Capital Markets.",
   "description": "Shmuel Berger is an independent consultant in financial risk management, FX and commodity hedging and investment advisory, with over four decades in the financial markets in Israel and the United States. A regular panelist on The Economy Channel, he currently advises several large Israeli companies opposite bank dealing rooms.",
   "url": "https://shmuelberger.co.il/en/",
   "image": "https://shmuelberger.co.il/assets/shmuel-berger.jpg",
   "email": "berger.finance@gmail.com",
   "telephone": "+972-54-458-1382",
   "knowsLanguage": ["he", "en"],
+  "sameAs": [
+    "https://www.linkedin.com/in/bergerfinance/",
+    "https://www.youtube.com/channel/UCVNjFmB7voOvysmtjRQCaaw",
+    "https://www.facebook.com/shmuel.berger.3/",
+    "https://www.instagram.com/berger.finance/"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "10 Ovadia HaNavi Street",
@@ -389,7 +396,7 @@ footer a:hover{color:var(--brass)}
 
 html.a11y-contrast{background:#000!important}
 html.a11y-contrast body{background:#000!important;color:#FFEB3B!important}
-html.a11y-contrast :is(section,header,footer,div,article,dl,dt,dd,.hero,.stats,.about,.services,.svc,.callout,.experience,.sectors-sec,.sector,.faq,.contact,.en,.a11y-panel){background:#000!important;color:#FFEB3B!important;border-color:#FFEB3B!important}
+html.a11y-contrast :is(section,header,footer,div,article,dl,dt,dd,.hero,.stats,.about,.services,.svc,.callout,.experience,.sectors-sec,.sector,.faq,.contact,.en,.a11y-panel,.social){background:#000!important;color:#FFEB3B!important;border-color:#FFEB3B!important}
 html.a11y-contrast a,html.a11y-contrast h1,html.a11y-contrast h2,html.a11y-contrast h3,html.a11y-contrast strong,html.a11y-contrast .eyebrow,html.a11y-contrast b{color:#FFEB3B!important}
 html.a11y-contrast img{filter:grayscale(1) contrast(1.2)}
 html.a11y-grayscale{filter:grayscale(1)}
@@ -426,6 +433,11 @@ html[data-a11y-font="-1"] body{font-size:16px}
   .rv{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
+.social{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0;
+        border-top:1px solid var(--hair);margin-top:14px}
+.social a{color:var(--mist-2);font-size:.85rem;letter-spacing:.02em;
+          text-decoration:none;transition:color .2s}
+.social a:hover,.social a:focus-visible{color:var(--brass)}
 </style>
 </head>
 <body>
@@ -485,6 +497,7 @@ html[data-a11y-font="-1"] body{font-size:16px}
         <li><a href="#services">Services</a></li>
         <li><a href="#experience">Career</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="/media.html" lang="he" dir="rtl">בתקשורת</a></li>
       </ul>
     </nav>
     <a class="lang-switch" href="/" lang="he" dir="rtl">עברית</a>
@@ -727,6 +740,12 @@ html[data-a11y-font="-1"] body{font-size:16px}
     <div>© <span id="yr">2026</span> Shmuel Berger · Berger Finance · Financial risk management &amp; FX hedging · Tel Aviv, Israel</div>
     <div><a href="tel:+972544581382">+972-54-458-1382</a> · <a href="mailto:berger.finance@gmail.com">berger.finance@gmail.com</a> · <a href="/" lang="he">עברית</a></div>
   </div>
+  <nav class="wrap social" aria-label="Social profiles">
+    <a href="https://www.linkedin.com/in/bergerfinance/" rel="me noopener" target="_blank">LinkedIn</a>
+    <a href="https://www.youtube.com/@%D7%A9%D7%9E%D7%95%D7%90%D7%9C%D7%91%D7%A8%D7%92%D7%A8" rel="me noopener" target="_blank">YouTube</a>
+    <a href="https://www.facebook.com/shmuel.berger.3/" rel="me noopener" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/berger.finance/" rel="me noopener" target="_blank">Instagram</a>
+  </nav>
   <div class="wrap foot-legal">
     <a href="/terms.html" lang="he" dir="rtl">תנאי שימוש</a>
     <a href="/privacy.html" lang="he" dir="rtl">מדיניות פרטיות</a>

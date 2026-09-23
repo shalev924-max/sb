@@ -52,6 +52,7 @@
   "givenName": "שמואל",
   "familyName": "ברגר",
   "jobTitle": "מומחה לניהול סיכונים פיננסיים, גידור מט\"ח וסחורות",
+  "disambiguatingDescription": "שמואל ברגר, מומחה לניהול סיכונים פיננסיים וגידור מט\"ח וסחורות, לשעבר עושה שוק ברצפת המסחר של בורסת CBOE בשיקגו ובעלים של מרווחים שוקי הון.",
   "description": "שמואל ברגר הוא מומחה עצמאי לניהול סיכונים פיננסיים, גידור מט\"ח וסחורות וניהול השקעות, עם למעלה מארבעה עשורים של פעילות בשווקים הפיננסיים בישראל ובארצות הברית. פאנליסט קבוע בערוץ הכלכלה, ומלווה כיום מספר חברות גדולות במשק מול חדרי המסחר בבנקים.",
   "url": "https://shmuelberger.co.il/",
   "image": "https://shmuelberger.co.il/assets/shmuel-berger.jpg",
@@ -59,6 +60,12 @@
   "telephone": "+972-54-458-1382",
   "nationality": "IL",
   "knowsLanguage": ["he", "en"],
+  "sameAs": [
+    "https://www.linkedin.com/in/bergerfinance/",
+    "https://www.youtube.com/channel/UCVNjFmB7voOvysmtjRQCaaw",
+    "https://www.facebook.com/shmuel.berger.3/",
+    "https://www.instagram.com/berger.finance/"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "עובדיה הנביא 10",
@@ -516,7 +523,7 @@ details p{margin:16px 0 0;color:#41586E;font-size:1rem;max-width:76ch;line-heigh
 /* מצבי נגישות מופעלים */
 html.a11y-contrast{background:#000!important}
 html.a11y-contrast body{background:#000!important;color:#FFEB3B!important}
-html.a11y-contrast :is(section,header,footer,div,article,dl,dt,dd,.hero,.stats,.about,.services,.svc,.callout,.experience,.sectors-sec,.sector,.faq,.contact,.en,.modal,.a11y-panel){background:#000!important;color:#FFEB3B!important;border-color:#FFEB3B!important}
+html.a11y-contrast :is(section,header,footer,div,article,dl,dt,dd,.hero,.stats,.about,.services,.svc,.callout,.experience,.sectors-sec,.sector,.faq,.contact,.en,.modal,.a11y-panel,.social){background:#000!important;color:#FFEB3B!important;border-color:#FFEB3B!important}
 html.a11y-contrast a,html.a11y-contrast h1,html.a11y-contrast h2,html.a11y-contrast h3,html.a11y-contrast strong,html.a11y-contrast .eyebrow,html.a11y-contrast .brass,html.a11y-contrast b{color:#FFEB3B!important}
 html.a11y-contrast img{filter:grayscale(1) contrast(1.2)}
 html.a11y-grayscale{filter:grayscale(1)}
@@ -570,6 +577,11 @@ footer a:hover{color:var(--brass)}
   .rv{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
+.social{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0;
+        border-top:1px solid var(--hair);margin-top:14px}
+.social a{color:var(--mist-2);font-size:.85rem;letter-spacing:.02em;
+          text-decoration:none;transition:color .2s}
+.social a:hover,.social a:focus-visible{color:var(--brass)}
 </style>
 </head>
 
@@ -634,6 +646,7 @@ footer a:hover{color:var(--brass)}
         <li><a href="#experience">ניסיון</a></li>
         <li><a href="#sectors">תחומים</a></li>
         <li><a href="#faq">שאלות</a></li>
+        <li><a href="/media.html">בתקשורת</a></li>
       </ul>
     </nav>
     <a class="callbtn" href="tel:+972544581382">054-458-1382</a>
@@ -1042,10 +1055,16 @@ footer a:hover{color:var(--brass)}
     <div>© <span id="yr">2026</span> שמואל ברגר · ברגר פייננס · ניהול סיכונים פיננסיים, גידור מט״ח וסחורות · תל אביב</div>
     <div><a href="tel:+972544581382">054-458-1382</a> · <a href="mailto:berger.finance@gmail.com">berger.finance@gmail.com</a> · <a href="/en/" lang="en">English</a></div>
   </div>
+  <nav class="wrap social" aria-label="פרופילים חברתיים">
+    <a href="https://www.linkedin.com/in/bergerfinance/" rel="me noopener" target="_blank">LinkedIn</a>
+    <a href="https://www.youtube.com/@%D7%A9%D7%9E%D7%95%D7%90%D7%9C%D7%91%D7%A8%D7%92%D7%A8" rel="me noopener" target="_blank">YouTube</a>
+    <a href="https://www.facebook.com/shmuel.berger.3/" rel="me noopener" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/berger.finance/" rel="me noopener" target="_blank">Instagram</a>
+  </nav>
   <div class="wrap foot-legal">
-    <a href="terms.html">תנאי שימוש ותקנון</a>
-    <a href="privacy.html">מדיניות פרטיות</a>
-    <a href="accessibility.html">הצהרת נגישות</a>
+    <a href="/terms.html">תנאי שימוש ותקנון</a>
+    <a href="/privacy.html">מדיניות פרטיות</a>
+    <a href="/accessibility.html">הצהרת נגישות</a>
   </div>
 </footer>
 
